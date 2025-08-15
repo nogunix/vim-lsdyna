@@ -51,7 +51,7 @@ let g:lsdynaCommentString = '$-->'
 "-------------------------------------------------------------------------------
 
 syntax on
-colorscheme lsdyna-tokyonight
+colorscheme lsdyna_tokyonight
 
 "-------------------------------------------------------------------------------
 "    MAIN SETTINGS
