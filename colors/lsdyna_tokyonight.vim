@@ -20,6 +20,7 @@ let s:yellow    = '#e0af68'
 let s:comment   = '#565f89'
 let s:search_bg = '#3d59a1'
 let s:visual_bg = '#364a82'
+let s:cursorline_bg = '#292e42'
 let s:col_bg    = '#2f3550'
 
 " 256-color approximations
@@ -31,6 +32,7 @@ let s:ct_yellow    = 179
 let s:ct_comment   = 60
 let s:ct_searchbg  = 61
 let s:ct_visualbg  = 60
+let s:ct_cursorlinebg = 236
 let s:ct_colbg     = 60
 
 if &filetype ==# 'lsdyna' || (exists('b:current_syntax') && b:current_syntax ==# 'lsdyna')
@@ -39,7 +41,9 @@ if &filetype ==# 'lsdyna' || (exists('b:current_syntax') && b:current_syntax ==#
   execute 'highlight Visual guifg=NONE guibg=' . s:visual_bg . ' gui=NONE ctermfg=NONE ctermbg=' . s:ct_visualbg . ' cterm=NONE'
   execute 'highlight Folded guifg=' . s:comment . ' guibg=' . s:bg . ' gui=NONE ctermfg=' . s:ct_comment . ' ctermbg=' . s:ct_bg . ' cterm=NONE'
   execute 'highlight Cursor guifg=' . s:bg . ' guibg=' . s:fg . ' gui=NONE ctermfg=' . s:ct_bg . ' ctermbg=' . s:ct_fg . ' cterm=NONE'
-  execute 'highlight CursorLine guifg=NONE guibg=' . s:visual_bg . ' gui=NONE ctermfg=NONE ctermbg=' . s:ct_visualbg . ' cterm=NONE'
+  execute 'highlight lCursor guifg=' . s:bg . ' guibg=' . s:fg . ' gui=NONE ctermfg=' . s:ct_bg . ' ctermbg=' . s:ct_fg . ' cterm=NONE'
+  execute 'highlight CursorLine guifg=NONE guibg=' . s:cursorline_bg . ' gui=NONE ctermfg=NONE ctermbg=' . s:ct_cursorlinebg . ' cterm=NONE'
+  execute 'highlight CursorLineNr guifg=' . s:yellow . ' guibg=' . s:cursorline_bg . ' gui=NONE ctermfg=' . s:ct_yellow . ' ctermbg=' . s:ct_cursorlinebg . ' cterm=NONE'
   execute 'highlight StatusLine guifg=' . s:fg . ' guibg=' . s:blue . ' gui=NONE ctermfg=' . s:ct_fg . ' ctermbg=' . s:ct_blue . ' cterm=NONE'
   execute 'highlight Pmenu guifg=' . s:fg . ' guibg=' . s:bg . ' gui=NONE ctermfg=' . s:ct_fg . ' ctermbg=' . s:ct_bg . ' cterm=NONE'
   execute 'highlight PmenuSel guifg=' . s:bg . ' guibg=' . s:fg . ' gui=NONE ctermfg=' . s:ct_bg . ' ctermbg=' . s:ct_fg . ' cterm=NONE'
