@@ -21,7 +21,7 @@ let s:comment   = '#565f89'
 let s:search_bg = '#3d59a1'
 let s:visual_bg = '#364a82'
 let s:cursorline_bg = '#292e42'
-let s:col_bg    = '#2f3550'
+let s:col_bg    = '#3a4160'
 
 " 256-color approximations
 let s:ct_bg        = 234
@@ -33,7 +33,7 @@ let s:ct_comment   = 60
 let s:ct_searchbg  = 61
 let s:ct_visualbg  = 60
 let s:ct_cursorlinebg = 236
-let s:ct_colbg     = 60
+let s:ct_colbg     = 61
 
 if &filetype ==# 'lsdyna' || (exists('b:current_syntax') && b:current_syntax ==# 'lsdyna')
   execute 'highlight Normal guifg=' . s:fg . ' guibg=' . s:bg . ' gui=NONE ctermfg=' . s:ct_fg . ' ctermbg=' . s:ct_bg . ' cterm=NONE'
